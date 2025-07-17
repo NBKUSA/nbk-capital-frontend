@@ -4,10 +4,10 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>LLOYDS MORGAN Pay</title>
+        <title>DEFENDER</title>
       </Head>
       <main>
-        <h1>Welcome to LLOYDS MORGAN Pay Terminal</h1>
+        <h1>Welcome to DEFENDER</h1>
         <p>Please log in to continue.</p>
       </main>
     </div>
