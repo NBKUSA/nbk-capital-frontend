@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Card Payment Terminal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Card Terminal</div>
+    <button class="theme-toggle" id="theme-toggle">🌙</button>
+  </nav>
+  <main>
+    <section class="terminal-section">
+      <div class="card-preview" id="card-preview">
+        <div class="chip"></div>
+        <div class="card-number" id="preview-number">•••• •••• •••• ••••</div>
+        <div class="card-details">
+          <span class="card-holder" id="preview-holder">NAME SURNAME</span>
+          <span class="card-expiry" id="preview-expiry">MM/YY</span>
+        </div>
+      </div>
+      <form id="payment-form" autocomplete="off">
+        <label>
+          Card Number
+          <input type="text" maxlength="19" inputmode="numeric" id="card-number" placeholder="1234 5678 9012 3456" required />
+        </label>
+        <label>
+          Card Holder
+          <input type="text" maxlength="26" id="card-holder" placeholder="Name Surname" required />
+        </label>
+        <div class="input-row">
+          <label>
+            Expiry
+            <input type="text" maxlength="5" id="card-expiry" placeholder="MM/YY" required />
+          </label>
+          <label>
+            CVV
+            <input type="password" maxlength="4" inputmode="numeric" id="card-cvv" placeholder="123" required />
+          </label>
+        </div>
+        <label>
+          Amount
+          <input type="number" min="0" step="0.01" id="amount" placeholder="Amount" required />
+        </label>
+        <button type="submit">Pay</button>
+        <div id="form-message"></div>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
